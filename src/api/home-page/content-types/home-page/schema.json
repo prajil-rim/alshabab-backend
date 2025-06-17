@@ -1,0 +1,82 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slides": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.hero-slide"
+      ]
+    },
+    "reels_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.reels-section"
+    },
+    "why_us_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.why-us-section"
+    },
+    "package_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.home-package-section"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.footer-cta-section"
+    },
+    "info_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.home-info-section"
+    },
+    "blog_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.blog-section"
+    },
+    "popular_destinations": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.tab-slider-section"
+    },
+    "global_tour_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.globar-tour-section"
+    },
+    "trending_search": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "price_range": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.labels"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

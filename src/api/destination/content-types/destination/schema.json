@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinations",
+  "info": {
+    "singularName": "destination",
+    "pluralName": "destinations",
+    "displayName": "Destination",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "destination": {
+      "type": "string"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.destination-hero-section"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "destination"
+    },
+    "info_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.info-block"
+    },
+    "reels_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.reels-section"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.footer-cta-section"
+    },
+    "attractions_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.attractions-section"
+    },
+    "stays_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.stays-section"
+    },
+    "experience_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.experience-section"
+    },
+    "gallery_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.gallery-section"
+    },
+    "route_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.route-section"
+    },
+    "form_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.form-section"
+    },
+    "deals_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.deals-section"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package",
+      "mappedBy": "destination"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

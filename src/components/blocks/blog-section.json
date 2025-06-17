@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_blog_sections",
+  "info": {
+    "displayName": "Blog Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

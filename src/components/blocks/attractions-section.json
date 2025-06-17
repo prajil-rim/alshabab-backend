@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_attractions_sections",
+  "info": {
+    "displayName": "Attractions Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.hover-card"
+    }
+  }
+}

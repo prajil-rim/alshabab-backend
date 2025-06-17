@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_awards_sections",
+  "info": {
+    "displayName": "Awards Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "awards": {
+      "displayName": "Award Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.award-card"
+    }
+  }
+}

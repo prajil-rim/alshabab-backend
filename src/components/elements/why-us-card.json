@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_elements_why_us_cards",
+  "info": {
+    "displayName": "Why Us Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isImageOnly": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

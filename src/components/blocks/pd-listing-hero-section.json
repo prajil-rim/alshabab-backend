@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_blocks_pd_listing_hero_sections",
+  "info": {
+    "displayName": "PD Listing Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cta_button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "cta_whatsapp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "slide_name": {
+      "type": "string",
+      "required": true
+    },
+    "background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

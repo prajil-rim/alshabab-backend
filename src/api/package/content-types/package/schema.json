@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "singularName": "package",
+    "pluralName": "packages",
+    "displayName": "Package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "package": {
+      "type": "string",
+      "required": true
+    },
+    "hero": {
+      "displayName": "Image Hero Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image-hero-section"
+    },
+    "package_includes_section": {
+      "displayName": "Package Includes Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.package-includes-section"
+    },
+    "trip_details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.experience-section"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.footer-cta-section"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "package"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "price_per": {
+      "type": "string",
+      "required": false
+    },
+    "packages_for": {
+      "displayName": "Labels",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.labels"
+    },
+    "form_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.form-section"
+    },
+    "blog_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.blog-section"
+    },
+    "summary": {
+      "type": "text",
+      "required": true
+    },
+    "destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::destination.destination",
+      "inversedBy": "package"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

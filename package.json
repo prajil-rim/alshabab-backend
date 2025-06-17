@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.13.0",
+    "@strapi/plugin-seo": "^2.0.8",
     "@strapi/plugin-users-permissions": "5.13.0",
+    "@strapi/provider-upload-cloudinary": "^5.13.0",
     "@strapi/strapi": "5.13.0",
     "pg": "8.8.0",
     "react": "^18.0.0",
@@ -35,7 +37,7 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "0c583e6c-84bf-4910-b970-3a980726323f",
-    "installId": "78882e74ce5688631a0aa43c8ffc7dc5150d6501a1077bd1cce4f93000b6e43b"
+    "uuid": "5e1a141a-e08b-4fca-bc25-1c3da5acbfa3",
+    "installId": "a0d5d3dbfb1a6cbccafd7184fdb15bb1fdea8e1ac57dd7b78c9d7ea19a3a256c"
   }
 }

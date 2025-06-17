@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_office_chips",
+  "info": {
+    "displayName": "Office Chip"
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "url": {
+      "type": "text",
+      "required": true,
+      "regex": "^https:\\/\\/www\\.google\\.com\\/maps\\/embed\\?pb=![\\w\\d!%:\\-._~]+$"
+    }
+  }
+}

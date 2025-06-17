@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_form_with_points_sections",
+  "info": {
+    "displayName": "Form With Points Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "point_1_title": {
+      "type": "string"
+    },
+    "point_1_description": {
+      "type": "text"
+    },
+    "point_2_title": {
+      "type": "string"
+    },
+    "point_2_description": {
+      "type": "text"
+    },
+    "point_3_title": {
+      "type": "string"
+    },
+    "point_3_description": {
+      "type": "text"
+    }
+  }
+}

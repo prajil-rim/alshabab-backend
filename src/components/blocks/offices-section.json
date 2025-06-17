@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_offices_sections",
+  "info": {
+    "displayName": "Offices Section"
+  },
+  "options": {},
+  "attributes": {
+    "offices": {
+      "displayName": "Office Chip",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.office-chip"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

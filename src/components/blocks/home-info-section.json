@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_home_info_sections",
+  "info": {
+    "displayName": "Home Info Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "success_trips": {
+      "type": "string",
+      "required": false
+    },
+    "happy_clients": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "smallImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "largeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heading_2": {
+      "type": "richtext"
+    }
+  }
+}

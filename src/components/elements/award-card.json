@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_award_cards",
+  "info": {
+    "displayName": "Award Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.logo"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "text"
+    }
+  }
+}

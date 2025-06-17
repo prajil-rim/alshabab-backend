@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_us_pages",
+  "info": {
+    "singularName": "contact-us-page",
+    "pluralName": "contact-us-pages",
+    "displayName": "Contact Us Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image-hero-section"
+    },
+    "contact_title": {
+      "type": "string",
+      "required": true
+    },
+    "contact_info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.contact-info"
+    },
+    "offices_section": {
+      "displayName": "Offices Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.offices-section"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.footer-cta-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

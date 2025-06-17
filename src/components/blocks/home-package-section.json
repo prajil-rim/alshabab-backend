@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_home_package_sections",
+  "info": {
+    "displayName": "Grid Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "hover_card": {
+      "displayName": "Hover Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.hover-card"
+    }
+  }
+}

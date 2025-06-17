@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_stays_sections",
+  "info": {
+    "displayName": "Stays Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "stays": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.hover-card"
+    }
+  }
+}

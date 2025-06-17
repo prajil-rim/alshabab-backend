@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trending_searches",
+  "info": {
+    "singularName": "trending-search",
+    "pluralName": "trending-searches",
+    "displayName": "Trending Search"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}

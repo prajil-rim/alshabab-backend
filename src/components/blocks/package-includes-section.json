@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_package_includes_sections",
+  "info": {
+    "displayName": "Package Includes Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "package_includes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.hover-card"
+    }
+  }
+}

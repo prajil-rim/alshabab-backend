@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_hero_slides",
+  "info": {
+    "displayName": "Hero Slide",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "attraction": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "background": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.cover"
+    }
+  }
+}

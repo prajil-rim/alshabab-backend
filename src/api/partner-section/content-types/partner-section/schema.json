@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "partner_sections",
+  "info": {
+    "singularName": "partner-section",
+    "pluralName": "partner-sections",
+    "displayName": "Partner Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "partner_logo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.logo"
+    }
+  }
+}

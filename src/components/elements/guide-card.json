@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_elements_guide_cards",
+  "info": {
+    "displayName": "Guide Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.labels"
+    },
+    "expertise": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.labels"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.logo-link"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

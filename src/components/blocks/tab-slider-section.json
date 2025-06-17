@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_tab_slider_sections",
+  "info": {
+    "displayName": "Tab Slider Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "tabs": {
+      "displayName": "Tab Slide",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.tab-slide"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_blogs_list_sections",
+  "info": {
+    "displayName": "Blogs List Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "blog_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-category.blog-category"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_route_sections",
+  "info": {
+    "displayName": "Route Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "routes": {
+      "displayName": "Route Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.route-card"
+    }
+  }
+}

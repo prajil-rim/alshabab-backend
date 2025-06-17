@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "package_consultation_forms",
+  "info": {
+    "singularName": "package-consultation-form",
+    "pluralName": "package-consultation-forms",
+    "displayName": "Package Consultation Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
+    },
+    "origin": {
+      "type": "string"
+    }
+  }
+}

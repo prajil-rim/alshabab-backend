@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_gallery_cards",
+  "info": {
+    "displayName": "Gallery Card"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

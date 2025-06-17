@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_gallery_sections",
+  "info": {
+    "displayName": "Gallery Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "gallery": {
+      "displayName": "Gallery Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.gallery-card"
+    }
+  }
+}

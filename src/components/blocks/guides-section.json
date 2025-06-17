@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_guides_sections",
+  "info": {
+    "displayName": "Guides Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "guides_list": {
+      "displayName": "Guide Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.guide-card"
+    }
+  }
+}

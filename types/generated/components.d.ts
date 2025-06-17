@@ -1,0 +1,835 @@
+import type { Schema, Struct } from '@strapi/strapi';
+
+export interface BlocksAboutUsSection1 extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_about_us_section_1s';
+  info: {
+    description: '';
+    displayName: 'About Us Section 1';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image_1: Schema.Attribute.Media<'images'>;
+    image_2: Schema.Attribute.Media<'images'>;
+    info_card: Schema.Attribute.Component<'elements.info-card', true>;
+    subtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksAttractionsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_attractions_sections';
+  info: {
+    displayName: 'Attractions Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.hover-card', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksAwardsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_awards_sections';
+  info: {
+    displayName: 'Awards Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Component<'elements.award-card', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksBlogHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_blog_hero_sections';
+  info: {
+    description: '';
+    displayName: 'Blog Hero Section';
+  };
+  attributes: {
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    cover: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    read_time: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksBlogSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_blog_sections';
+  info: {
+    description: '';
+    displayName: 'Blog Section';
+  };
+  attributes: {
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksBlogsListSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_blogs_list_sections';
+  info: {
+    displayName: 'Blogs List Section';
+  };
+  attributes: {
+    blog_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-category.blog-category'
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksDealsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_deals_sections';
+  info: {
+    description: '';
+    displayName: 'Deals Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    packages: Schema.Attribute.Relation<'oneToMany', 'api::package.package'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksDestinationHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_destination_hero_sections';
+  info: {
+    description: '';
+    displayName: 'Destination Hero Section';
+  };
+  attributes: {
+    background: Schema.Attribute.Component<'elements.cover', false>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    destination: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksExperienceSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_experience_sections';
+  info: {
+    description: '';
+    displayName: 'Experience Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    details: Schema.Attribute.Component<'blocks.info-block', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksFeaturedInSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_featured_in_sections';
+  info: {
+    displayName: 'Featured In Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    featured: Schema.Attribute.Component<'elements.featured-in-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksFooterCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_footer_cta_sections';
+  info: {
+    displayName: 'Footer CTA Section';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images'>;
+    cta_call: Schema.Attribute.Component<'elements.link', false>;
+    cta_chat: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    text_align: Schema.Attribute.Enumeration<['left', 'center']> &
+      Schema.Attribute.DefaultTo<'left'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_form_sections';
+  info: {
+    displayName: 'Form Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    heading_2: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksFormWithPointsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_form_with_points_sections';
+  info: {
+    displayName: 'Form With Points Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    point_1_description: Schema.Attribute.Text;
+    point_1_title: Schema.Attribute.String;
+    point_2_description: Schema.Attribute.Text;
+    point_2_title: Schema.Attribute.String;
+    point_3_description: Schema.Attribute.Text;
+    point_3_title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksGallerySection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_gallery_sections';
+  info: {
+    displayName: 'Gallery Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    gallery: Schema.Attribute.Component<'elements.gallery-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksGlobarTourSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_globar_tour_sections';
+  info: {
+    displayName: 'Globar Tour Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    tours: Schema.Attribute.Component<'elements.global-tour-card', true>;
+  };
+}
+
+export interface BlocksGuidesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_guides_sections';
+  info: {
+    displayName: 'Guides Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    guides_list: Schema.Attribute.Component<'elements.guide-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksHeroSlide extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hero_slides';
+  info: {
+    description: '';
+    displayName: 'Hero Slide';
+  };
+  attributes: {
+    attraction: Schema.Attribute.String;
+    background: Schema.Attribute.Component<'elements.cover', false>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    destination: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksHomeInfoSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_home_info_sections';
+  info: {
+    description: '';
+    displayName: 'Home Info Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    happy_clients: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    heading_2: Schema.Attribute.RichText;
+    largeImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    smallImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    success_trips: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksHomePackageSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_home_package_sections';
+  info: {
+    description: '';
+    displayName: 'Grid Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    hover_card: Schema.Attribute.Component<'elements.hover-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksImageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_image_hero_sections';
+  info: {
+    displayName: 'Image Hero Section';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksInfoBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_info_blocks';
+  info: {
+    displayName: 'Info Block';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    largeImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    smallImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksMapSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_map_sections';
+  info: {
+    displayName: 'Map Section';
+  };
+  attributes: {
+    address_1: Schema.Attribute.Text & Schema.Attribute.Required;
+    address_2: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    location_1: Schema.Attribute.String & Schema.Attribute.Required;
+    location_2: Schema.Attribute.String & Schema.Attribute.Required;
+    phone_1: Schema.Attribute.String & Schema.Attribute.Required;
+    phone_2: Schema.Attribute.String & Schema.Attribute.Required;
+    timing_1: Schema.Attribute.String & Schema.Attribute.Required;
+    timing_2: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksOfficesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_offices_sections';
+  info: {
+    displayName: 'Offices Section';
+  };
+  attributes: {
+    offices: Schema.Attribute.Component<'elements.office-chip', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksOurJourney extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_our_journeys';
+  info: {
+    displayName: 'Our Journey';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    journey_details: Schema.Attribute.Component<'elements.journey-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_includes_sections';
+  info: {
+    description: '';
+    displayName: 'Package Includes Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    package_includes: Schema.Attribute.Component<'elements.hover-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksPdListingHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_pd_listing_hero_sections';
+  info: {
+    displayName: 'PD Listing Hero Section';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    cta_button: Schema.Attribute.Component<'elements.link', false>;
+    cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    slide_name: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksReelsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_reels_sections';
+  info: {
+    displayName: 'Reels Section';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images' | 'files'>;
+    button: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    reels: Schema.Attribute.Media<'files' | 'videos', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksRouteSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_route_sections';
+  info: {
+    displayName: 'Route Section';
+  };
+  attributes: {
+    routes: Schema.Attribute.Component<'elements.route-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksStaysSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_stays_sections';
+  info: {
+    displayName: 'Stays Section';
+  };
+  attributes: {
+    stays: Schema.Attribute.Component<'elements.hover-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksTabSliderSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_tab_slider_sections';
+  info: {
+    description: '';
+    displayName: 'Tab Slider Section';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    tabs: Schema.Attribute.Component<'elements.tab-slide', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksWhyUsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_why_us_sections';
+  info: {
+    description: '';
+    displayName: 'Why us Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.why-us-card', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsAwardCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_award_cards';
+  info: {
+    description: '';
+    displayName: 'Award Card';
+  };
+  attributes: {
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.Text;
+    year: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsContactInfo extends Struct.ComponentSchema {
+  collectionName: 'components_elements_contact_infos';
+  info: {
+    displayName: 'Contact Info';
+  };
+  attributes: {
+    contact: Schema.Attribute.Enumeration<['phone', 'email', 'location']>;
+    contact_details: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsCover extends Struct.ComponentSchema {
+  collectionName: 'components_elements_covers';
+  info: {
+    description: '';
+    displayName: 'Cover';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['video', 'image']> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsFaqCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_faq_cards';
+  info: {
+    description: '';
+    displayName: 'FAQ Card';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsFeaturedInCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_featured_in_cards';
+  info: {
+    description: '';
+    displayName: 'Featured In Card';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.Component<'elements.link', false>;
+  };
+}
+
+export interface ElementsGalleryCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_gallery_cards';
+  info: {
+    displayName: 'Gallery Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsGlobalTourCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_global_tour_cards';
+  info: {
+    description: '';
+    displayName: 'Global Tour Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    layout: Schema.Attribute.Enumeration<['rectangle', 'square']>;
+  };
+}
+
+export interface ElementsGuideCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_guide_cards';
+  info: {
+    description: '';
+    displayName: 'Guide Card';
+  };
+  attributes: {
+    expertise: Schema.Attribute.Component<'elements.labels', true>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+    languages: Schema.Attribute.Component<'elements.labels', true>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    socials: Schema.Attribute.Component<'elements.logo-link', true>;
+  };
+}
+
+export interface ElementsHoverCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_hover_cards';
+  info: {
+    description: '';
+    displayName: 'Hover Card';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsInfoCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_info_cards';
+  info: {
+    description: '';
+    displayName: 'Info Card';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsJourneyCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_journey_cards';
+  info: {
+    description: '';
+    displayName: 'Journey Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    year: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsLabels extends Struct.ComponentSchema {
+  collectionName: 'components_elements_labels';
+  info: {
+    displayName: 'Labels';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsLogo extends Struct.ComponentSchema {
+  collectionName: 'components_elements_logos';
+  info: {
+    displayName: 'Logo';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    logoText: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsLogoLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_logo_links';
+  info: {
+    displayName: 'Logo Link';
+  };
+  attributes: {
+    href: Schema.Attribute.Text & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    isExternal: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsOfficeChip extends Struct.ComponentSchema {
+  collectionName: 'components_elements_office_chips';
+  info: {
+    displayName: 'Office Chip';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    location: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsRouteCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_route_cards';
+  info: {
+    displayName: 'Route Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    google_map_link: Schema.Attribute.Component<'elements.link', false>;
+    icon: Schema.Attribute.Component<'elements.logo', false>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsTabSlide extends Struct.ComponentSchema {
+  collectionName: 'components_elements_tab_slides';
+  info: {
+    description: '';
+    displayName: 'Tab Slide';
+  };
+  attributes: {
+    slides: Schema.Attribute.Component<'elements.hover-card', true>;
+    tab_heading: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsTestimonialCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_testimonial_cards';
+  info: {
+    displayName: 'Testimonial Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    location: Schema.Attribute.String & Schema.Attribute.Required;
+    testimonial: Schema.Attribute.Text & Schema.Attribute.Required;
+    user: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsWhyUsCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_why_us_cards';
+  info: {
+    description: '';
+    displayName: 'Why Us Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'files' | 'images'>;
+    image: Schema.Attribute.Media<'images'>;
+    isImageOnly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooter extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footers';
+  info: {
+    description: '';
+    displayName: 'Footer';
+  };
+  attributes: {
+    contact_info: Schema.Attribute.Component<'elements.contact-info', true>;
+    cookies: Schema.Attribute.Component<'elements.link', false>;
+    copy: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+    privacy_policy: Schema.Attribute.Component<'elements.link', false>;
+    quick_links: Schema.Attribute.Component<'elements.link', true>;
+    sitemap: Schema.Attribute.Component<'elements.link', false>;
+    socials: Schema.Attribute.Component<'elements.logo-link', true>;
+    support: Schema.Attribute.Component<'elements.link', true>;
+    terms: Schema.Attribute.Component<'elements.link', false>;
+  };
+}
+
+export interface LayoutHeader extends Struct.ComponentSchema {
+  collectionName: 'components_layout_headers';
+  info: {
+    displayName: 'Header';
+  };
+  attributes: {
+    cta: Schema.Attribute.String;
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+  };
+}
+
+export interface SharedOpenGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_open_graphs';
+  info: {
+    displayName: 'openGraph';
+    icon: 'project-diagram';
+  };
+  attributes: {
+    ogDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    ogImage: Schema.Attribute.Media<'images'>;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 70;
+      }>;
+    ogType: Schema.Attribute.String;
+    ogUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'seo';
+    icon: 'search';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+        minLength: 50;
+      }>;
+    metaImage: Schema.Attribute.Media<'images'>;
+    metaRobots: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    metaViewport: Schema.Attribute.String;
+    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'blocks.about-us-section-1': BlocksAboutUsSection1;
+      'blocks.attractions-section': BlocksAttractionsSection;
+      'blocks.awards-section': BlocksAwardsSection;
+      'blocks.blog-hero-section': BlocksBlogHeroSection;
+      'blocks.blog-section': BlocksBlogSection;
+      'blocks.blogs-list-section': BlocksBlogsListSection;
+      'blocks.deals-section': BlocksDealsSection;
+      'blocks.destination-hero-section': BlocksDestinationHeroSection;
+      'blocks.experience-section': BlocksExperienceSection;
+      'blocks.featured-in-section': BlocksFeaturedInSection;
+      'blocks.footer-cta-section': BlocksFooterCtaSection;
+      'blocks.form-section': BlocksFormSection;
+      'blocks.form-with-points-section': BlocksFormWithPointsSection;
+      'blocks.gallery-section': BlocksGallerySection;
+      'blocks.globar-tour-section': BlocksGlobarTourSection;
+      'blocks.guides-section': BlocksGuidesSection;
+      'blocks.hero-slide': BlocksHeroSlide;
+      'blocks.home-info-section': BlocksHomeInfoSection;
+      'blocks.home-package-section': BlocksHomePackageSection;
+      'blocks.image-hero-section': BlocksImageHeroSection;
+      'blocks.info-block': BlocksInfoBlock;
+      'blocks.map-section': BlocksMapSection;
+      'blocks.offices-section': BlocksOfficesSection;
+      'blocks.our-journey': BlocksOurJourney;
+      'blocks.package-includes-section': BlocksPackageIncludesSection;
+      'blocks.pd-listing-hero-section': BlocksPdListingHeroSection;
+      'blocks.reels-section': BlocksReelsSection;
+      'blocks.route-section': BlocksRouteSection;
+      'blocks.stays-section': BlocksStaysSection;
+      'blocks.tab-slider-section': BlocksTabSliderSection;
+      'blocks.why-us-section': BlocksWhyUsSection;
+      'elements.award-card': ElementsAwardCard;
+      'elements.contact-info': ElementsContactInfo;
+      'elements.cover': ElementsCover;
+      'elements.faq-card': ElementsFaqCard;
+      'elements.featured-in-card': ElementsFeaturedInCard;
+      'elements.gallery-card': ElementsGalleryCard;
+      'elements.global-tour-card': ElementsGlobalTourCard;
+      'elements.guide-card': ElementsGuideCard;
+      'elements.hover-card': ElementsHoverCard;
+      'elements.info-card': ElementsInfoCard;
+      'elements.journey-card': ElementsJourneyCard;
+      'elements.labels': ElementsLabels;
+      'elements.link': ElementsLink;
+      'elements.logo': ElementsLogo;
+      'elements.logo-link': ElementsLogoLink;
+      'elements.office-chip': ElementsOfficeChip;
+      'elements.route-card': ElementsRouteCard;
+      'elements.tab-slide': ElementsTabSlide;
+      'elements.testimonial-card': ElementsTestimonialCard;
+      'elements.why-us-card': ElementsWhyUsCard;
+      'layout.footer': LayoutFooter;
+      'layout.header': LayoutHeader;
+      'shared.open-graph': SharedOpenGraph;
+      'shared.seo': SharedSeo;
+    }
+  }
+}

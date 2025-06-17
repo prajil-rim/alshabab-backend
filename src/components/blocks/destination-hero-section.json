@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_destination_hero_sections",
+  "info": {
+    "displayName": "Destination Hero Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "background": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.cover"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "About Us Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image-hero-section"
+    },
+    "section_1": {
+      "displayName": "About Us Section 1",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.about-us-section-1"
+    },
+    "our_journey_section": {
+      "displayName": "Our Journey",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-journey"
+    },
+    "guides_section": {
+      "displayName": "Guides Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.guides-section"
+    },
+    "awards_section": {
+      "displayName": "Awards Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.awards-section"
+    },
+    "experiences_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.home-package-section"
+    },
+    "featured_in_section": {
+      "displayName": "Featured In Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.featured-in-section"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.footer-cta-section"
+    },
+    "purpose": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.info-block"
+    },
+    "map_section": {
+      "displayName": "Map Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.map-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

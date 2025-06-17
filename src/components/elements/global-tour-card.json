@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_global_tour_cards",
+  "info": {
+    "displayName": "Global Tour Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "rectangle",
+        "square"
+      ]
+    }
+  }
+}

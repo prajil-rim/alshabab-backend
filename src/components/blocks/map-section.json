@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_map_sections",
+  "info": {
+    "displayName": "Map Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "location_1": {
+      "type": "string",
+      "required": true
+    },
+    "address_1": {
+      "type": "text",
+      "required": true
+    },
+    "phone_1": {
+      "type": "string",
+      "required": true
+    },
+    "timing_1": {
+      "type": "string",
+      "required": true
+    },
+    "location_2": {
+      "type": "string",
+      "required": true
+    },
+    "address_2": {
+      "type": "text",
+      "required": true
+    },
+    "phone_2": {
+      "type": "string",
+      "required": true
+    },
+    "timing_2": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_featured_in_cards",
+  "info": {
+    "displayName": "Featured In Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.logo"
+    },
+    "url": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

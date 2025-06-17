@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_featured_in_sections",
+  "info": {
+    "displayName": "Featured In Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "featured": {
+      "displayName": "Featured In Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.featured-in-card"
+    }
+  }
+}

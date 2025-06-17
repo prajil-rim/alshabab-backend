@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_globar_tour_sections",
+  "info": {
+    "displayName": "Globar Tour Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "tours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.global-tour-card"
+    }
+  }
+}

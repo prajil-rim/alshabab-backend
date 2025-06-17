@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_about_us_section_1s",
+  "info": {
+    "displayName": "About Us Section 1",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image_1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "info_card": {
+      "displayName": "Info Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}
