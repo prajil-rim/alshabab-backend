@@ -789,36 +789,6 @@ export interface ApiFaqFaq extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiGlobalTourGlobalTour extends Struct.SingleTypeSchema {
-  collectionName: 'global_tours';
-  info: {
-    displayName: 'Global Tour';
-    pluralName: 'global-tours';
-    singularName: 'global-tour';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    destinations: Schema.Attribute.Component<'elements.global-tour-card', true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::global-tour.global-tour'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1648,7 +1618,6 @@ declare module '@strapi/strapi' {
       'api::destination-listing-page.destination-listing-page': ApiDestinationListingPageDestinationListingPage;
       'api::destination.destination': ApiDestinationDestination;
       'api::faq.faq': ApiFaqFaq;
-      'api::global-tour.global-tour': ApiGlobalTourGlobalTour;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::package-consultation-form.package-consultation-form': ApiPackageConsultationFormPackageConsultationForm;
