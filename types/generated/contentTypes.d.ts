@@ -676,6 +676,7 @@ export interface ApiDestinationListingPageDestinationListingPage
       'blocks.home-package-section',
       false
     >;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -732,6 +733,7 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
       'blocks.experience-section',
       false
     >;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -756,33 +758,10 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'destination'>;
     stays_section: Schema.Attribute.Component<'blocks.stays-section', false>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiFaqFaq extends Struct.SingleTypeSchema {
-  collectionName: 'faqs';
-  info: {
-    displayName: 'FAQ';
-    pluralName: 'faqs';
-    singularName: 'faq';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    faqs: Schema.Attribute.Component<'elements.faq-card', true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    testimonials: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -838,10 +817,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
     >;
+    form_section_title: Schema.Attribute.String;
     global_tour_section: Schema.Attribute.Component<
       'blocks.globar-tour-section',
       false
@@ -926,6 +907,7 @@ export interface ApiPackageListingPagePackageListingPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -974,6 +956,7 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::destination.destination'
     >;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -998,6 +981,10 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'package'>;
     summary: Schema.Attribute.Text & Schema.Attribute.Required;
+    testimonials: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    >;
     trip_details: Schema.Attribute.Component<
       'blocks.experience-section',
       false
@@ -1617,7 +1604,6 @@ declare module '@strapi/strapi' {
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
       'api::destination-listing-page.destination-listing-page': ApiDestinationListingPageDestinationListingPage;
       'api::destination.destination': ApiDestinationDestination;
-      'api::faq.faq': ApiFaqFaq;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::package-consultation-form.package-consultation-form': ApiPackageConsultationFormPackageConsultationForm;

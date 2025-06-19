@@ -1,14 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "faqs",
+  "collectionName": "components_blocks_faq_sections",
   "info": {
-    "singularName": "faq",
-    "pluralName": "faqs",
-    "displayName": "FAQ"
+    "displayName": "FAQ Section",
+    "description": ""
   },
-  "options": {
-    "draftAndPublish": true
-  },
+  "options": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -16,7 +12,7 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "faqs": {
       "type": "component",

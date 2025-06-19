@@ -107,6 +107,7 @@ export interface BlocksDestinationHeroSection extends Struct.ComponentSchema {
   attributes: {
     background: Schema.Attribute.Component<'elements.cover', false>;
     cta: Schema.Attribute.Component<'elements.link', false>;
+    cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
     destination: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -122,6 +123,19 @@ export interface BlocksExperienceSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     details: Schema.Attribute.Component<'blocks.info-block', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_faq_sections';
+  info: {
+    description: '';
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    faqs: Schema.Attribute.Component<'elements.faq-card', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -271,12 +285,14 @@ export interface BlocksHomePackageSection extends Struct.ComponentSchema {
 export interface BlocksImageHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_image_hero_sections';
   info: {
+    description: '';
     displayName: 'Image Hero Section';
   };
   attributes: {
     background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     cta: Schema.Attribute.Component<'elements.link', false>;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -412,6 +428,18 @@ export interface BlocksTabSliderSection extends Struct.ComponentSchema {
     button: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
     tabs: Schema.Attribute.Component<'elements.tab-slide', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksTestimonialSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_testimonial_sections';
+  info: {
+    displayName: 'Testimonial Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    testimonials: Schema.Attribute.Component<'elements.testimonial-card', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -784,6 +812,7 @@ declare module '@strapi/strapi' {
       'blocks.deals-section': BlocksDealsSection;
       'blocks.destination-hero-section': BlocksDestinationHeroSection;
       'blocks.experience-section': BlocksExperienceSection;
+      'blocks.faq-section': BlocksFaqSection;
       'blocks.featured-in-section': BlocksFeaturedInSection;
       'blocks.footer-cta-section': BlocksFooterCtaSection;
       'blocks.form-section': BlocksFormSection;
@@ -805,6 +834,7 @@ declare module '@strapi/strapi' {
       'blocks.route-section': BlocksRouteSection;
       'blocks.stays-section': BlocksStaysSection;
       'blocks.tab-slider-section': BlocksTabSliderSection;
+      'blocks.testimonial-section': BlocksTestimonialSection;
       'blocks.why-us-section': BlocksWhyUsSection;
       'elements.award-card': ElementsAwardCard;
       'elements.contact-info': ElementsContactInfo;

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_image_hero_sections",
   "info": {
-    "displayName": "Image Hero Section"
+    "displayName": "Image Hero Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,18 +11,23 @@
       "required": true
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "background": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "cta_whatsapp": {
       "type": "component",
       "repeatable": false,
       "component": "elements.link"

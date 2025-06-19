@@ -83,6 +83,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.testimonial-section"
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.faq-section"
     }
   }
 }

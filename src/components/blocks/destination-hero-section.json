@@ -24,6 +24,11 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.cover"
+    },
+    "cta_whatsapp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
     }
   }
 }
