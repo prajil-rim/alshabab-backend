@@ -10,14 +10,29 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "destination": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.destination-hero-section"
+      "component": "blocks.destination-hero-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "slug": {
       "type": "uid",
@@ -26,52 +41,102 @@
     "info_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.info-block"
+      "component": "blocks.info-block",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "reels_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.reels-section"
+      "component": "blocks.reels-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "footer_cta_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.footer-cta-section"
+      "component": "blocks.footer-cta-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "attractions_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.attractions-section"
+      "component": "blocks.attractions-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "stays_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.stays-section"
+      "component": "blocks.stays-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "experience_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.experience-section"
+      "component": "blocks.experience-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "gallery_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.gallery-section"
+      "component": "blocks.gallery-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "route_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.route-section"
+      "component": "blocks.route-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "form_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.form-section"
+      "component": "blocks.form-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "deals_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.deals-section"
+      "component": "blocks.deals-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "package": {
       "type": "relation",
@@ -82,17 +147,32 @@
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "testimonials": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.testimonial-section"
+      "component": "blocks.testimonial-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "faq_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.faq-section"
+      "component": "blocks.faq-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

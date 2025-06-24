@@ -4,20 +4,36 @@
   "info": {
     "singularName": "partner-section",
     "pluralName": "partner-sections",
-    "displayName": "Partner Section"
+    "displayName": "Partner Section",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "partner_logo": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.logo"
+      "component": "elements.logo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

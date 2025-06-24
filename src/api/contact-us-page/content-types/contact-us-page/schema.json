@@ -10,36 +10,71 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.image-hero-section"
+      "component": "blocks.image-hero-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contact_title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contact_info": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.contact-info"
+      "component": "elements.contact-info",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "offices_section": {
       "displayName": "Offices Section",
       "type": "component",
       "repeatable": false,
-      "component": "blocks.offices-section"
+      "component": "blocks.offices-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "footer_cta_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.footer-cta-section"
+      "component": "blocks.footer-cta-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

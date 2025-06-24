@@ -10,26 +10,51 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.blog-hero-section"
+      "component": "blocks.blog-hero-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "footer_cta_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.footer-cta-section"
+      "component": "blocks.footer-cta-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "blog_list_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.blogs-list-section"
+      "component": "blocks.blogs-list-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

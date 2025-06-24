@@ -686,6 +686,7 @@ export interface ElementsTabSlide extends Struct.ComponentSchema {
   attributes: {
     slides: Schema.Attribute.Component<'elements.hover-card', true>;
     tab_heading: Schema.Attribute.String & Schema.Attribute.Required;
+    tab_value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

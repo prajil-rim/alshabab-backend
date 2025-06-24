@@ -10,51 +10,101 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "type": "component",
       "repeatable": true,
-      "component": "blocks.pd-listing-hero-section"
+      "component": "blocks.pd-listing-hero-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "destinations": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.home-package-section"
+      "component": "blocks.home-package-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "form_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.form-with-points-section"
+      "component": "blocks.form-with-points-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "popular_destinations": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.tab-slider-section"
+      "component": "blocks.tab-slider-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "blog_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.blog-section"
+      "component": "blocks.blog-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "footer_cta_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.footer-cta-section"
+      "component": "blocks.footer-cta-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "global_tour_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.globar-tour-section"
+      "component": "blocks.globar-tour-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "faq_section": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.faq-section"
+      "component": "blocks.faq-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
