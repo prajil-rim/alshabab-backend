@@ -12,11 +12,6 @@
     "description": {
       "type": "text"
     },
-    "cta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.link"
-    },
     "destination": {
       "type": "string"
     },
@@ -29,6 +24,10 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.link"
+    },
+    "cta_button": {
+      "type": "string",
+      "required": true
     }
   }
 }

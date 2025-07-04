@@ -22,15 +22,14 @@
         "images"
       ]
     },
-    "cta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.link"
-    },
     "cta_whatsapp": {
       "type": "component",
       "repeatable": false,
       "component": "elements.link"
+    },
+    "cta_button": {
+      "type": "string",
+      "required": true
     }
   }
 }

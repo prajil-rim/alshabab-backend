@@ -106,7 +106,7 @@ export interface BlocksDestinationHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Component<'elements.cover', false>;
-    cta: Schema.Attribute.Component<'elements.link', false>;
+    cta_button: Schema.Attribute.String & Schema.Attribute.Required;
     cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
     destination: Schema.Attribute.String;
@@ -290,7 +290,7 @@ export interface BlocksImageHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    cta: Schema.Attribute.Component<'elements.link', false>;
+    cta_button: Schema.Attribute.String & Schema.Attribute.Required;
     cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -370,11 +370,12 @@ export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
 export interface BlocksPdListingHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_pd_listing_hero_sections';
   info: {
+    description: '';
     displayName: 'PD Listing Hero Section';
   };
   attributes: {
     background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    cta_button: Schema.Attribute.Component<'elements.link', false>;
+    cta_button: Schema.Attribute.String & Schema.Attribute.Required;
     cta_whatsapp: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     slide_name: Schema.Attribute.String & Schema.Attribute.Required;
