@@ -5,36 +5,37 @@
   },
   "options": {},
   "attributes": {
-    "reversed": {
-      "type": "boolean",
-      "default": false
-    },
-    "smallImage": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
-    "largeImage": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
     "title": {
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "richtext",
+      "required": true
+    },
+    "smallImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "largeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "reversed": {
+      "type": "boolean",
+      "default": false
     },
     "button": {
       "type": "component",
-      "repeatable": false,
-      "component": "elements.link"
+      "component": "elements.link",
+      "repeatable": false
     }
   }
 }

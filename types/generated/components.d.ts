@@ -259,7 +259,7 @@ export interface BlocksHomeInfoSection extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
     happy_clients: Schema.Attribute.String;
     heading: Schema.Attribute.String & Schema.Attribute.Required;
     heading_2: Schema.Attribute.RichText;
@@ -304,7 +304,7 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'elements.link', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
     largeImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     smallImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;

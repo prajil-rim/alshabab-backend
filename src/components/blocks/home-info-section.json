@@ -11,7 +11,7 @@
       "required": true
     },
     "description": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     },
     "success_trips": {
@@ -23,8 +23,8 @@
     },
     "cta": {
       "type": "component",
-      "repeatable": false,
-      "component": "elements.link"
+      "component": "elements.link",
+      "repeatable": false
     },
     "smallImage": {
       "type": "media",
