@@ -312,6 +312,18 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksInternalLinkSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_internal_link_sections';
+  info: {
+    displayName: 'Internal Link Section';
+    icon: 'bulletList';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksMapSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_map_sections';
   info: {
@@ -354,6 +366,71 @@ export interface BlocksOurJourney extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksPackageDayChart extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_day_charts';
+  info: {
+    displayName: 'Package Day Chart';
+  };
+  attributes: {
+    day_chart_card: Schema.Attribute.Component<
+      'elements.day-chart-card',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksPackageGeneralInfo extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_general_infos';
+  info: {
+    displayName: 'Package General Info';
+  };
+  attributes: {
+    call_us_on: Schema.Attribute.String;
+    duration: Schema.Attribute.Component<'elements.duration', false>;
+    flights: Schema.Attribute.Enumeration<['With Flight', 'Without Flight']> &
+      Schema.Attribute.Required;
+    form_modal_phone: Schema.Attribute.String & Schema.Attribute.Required;
+    form_modal_title: Schema.Attribute.String & Schema.Attribute.Required;
+    from_city: Schema.Attribute.String;
+    location_details: Schema.Attribute.Component<
+      'elements.location-details',
+      false
+    >;
+    more_about_trip: Schema.Attribute.Component<'elements.title-desc', false>;
+    package_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::package-category.package-category'
+    >;
+    package_includes: Schema.Attribute.Component<
+      'elements.label-with-icon',
+      true
+    >;
+    pay_with: Schema.Attribute.Component<'elements.pay-with', false>;
+    price_category: Schema.Attribute.String;
+    price_details: Schema.Attribute.Component<'elements.price-details', false>;
+    timing: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksPackageIncAndExc extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_inc_and_excs';
+  info: {
+    displayName: 'Package Inc & Exc';
+  };
+  attributes: {
+    exclusion: Schema.Attribute.Component<'elements.inc-exc-card', false>;
+    inclusion: Schema.Attribute.Component<'elements.inc-exc-card', false>;
+  };
+}
+
 export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_package_includes_sections';
   info: {
@@ -364,6 +441,37 @@ export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     package_includes: Schema.Attribute.Component<'elements.hover-card', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksPackageItinerary extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_itineraries';
+  info: {
+    displayName: 'Package Itinerary';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.Media<'images', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksPackagePolicies extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_package_policies';
+  info: {
+    displayName: 'Package Policies';
+  };
+  attributes: {
+    cancellation_policy: Schema.Attribute.Component<
+      'elements.policy-card',
+      false
+    >;
+    payment_policy: Schema.Attribute.Component<'elements.policy-card', false>;
+    payment_policy_points: Schema.Attribute.Component<'elements.labels', true>;
+    term_and_conditions: Schema.Attribute.Component<
+      'elements.package-terms-and-condition',
+      false
+    >;
   };
 }
 
@@ -498,6 +606,28 @@ export interface ElementsCover extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsDayChartCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_day_chart_cards';
+  info: {
+    displayName: 'Day Chart Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsDuration extends Struct.ComponentSchema {
+  collectionName: 'components_elements_durations';
+  info: {
+    displayName: 'Duration';
+  };
+  attributes: {
+    number_of_days: Schema.Attribute.Integer;
+    number_of_nights: Schema.Attribute.Integer;
+  };
+}
+
 export interface ElementsFaqCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_faq_cards';
   info: {
@@ -579,6 +709,17 @@ export interface ElementsHoverCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsIncExcCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_inc_exc_cards';
+  info: {
+    displayName: 'Inc Exc Card';
+  };
+  attributes: {
+    points: Schema.Attribute.Component<'elements.labels', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsInfoCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_info_cards';
   info: {
@@ -605,6 +746,17 @@ export interface ElementsJourneyCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsLabelWithIcon extends Struct.ComponentSchema {
+  collectionName: 'components_elements_label_with_icons';
+  info: {
+    displayName: 'Label with Icon';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsLabels extends Struct.ComponentSchema {
   collectionName: 'components_elements_labels';
   info: {
@@ -624,6 +776,17 @@ export interface ElementsLink extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsLocationDetails extends Struct.ComponentSchema {
+  collectionName: 'components_elements_location_details';
+  info: {
+    displayName: 'Location Details';
+  };
+  attributes: {
+    from_location: Schema.Attribute.String;
+    to_location: Schema.Attribute.String;
   };
 }
 
@@ -665,6 +828,68 @@ export interface ElementsOfficeChip extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsPackageCardBanner extends Struct.ComponentSchema {
+  collectionName: 'components_elements_package_card_banners';
+  info: {
+    displayName: 'Package Card Banner';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'elements.link', false>;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsPackageTermsAndCondition
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_package_terms_and_conditions';
+  info: {
+    displayName: 'Package Terms & Condition';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    disclaimer: Schema.Attribute.Text;
+    terms: Schema.Attribute.Component<'elements.inc-exc-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsPayWith extends Struct.ComponentSchema {
+  collectionName: 'components_elements_pay_withs';
+  info: {
+    displayName: 'Pay With';
+  };
+  attributes: {
+    tabby: Schema.Attribute.Boolean;
+    tamara: Schema.Attribute.Boolean;
+  };
+}
+
+export interface ElementsPolicyCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_policy_cards';
+  info: {
+    displayName: 'Policy Card';
+  };
+  attributes: {
+    column_1: Schema.Attribute.Component<'elements.labels', true>;
+    column_2: Schema.Attribute.Component<'elements.labels', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsPriceDetails extends Struct.ComponentSchema {
+  collectionName: 'components_elements_price_details';
+  info: {
+    displayName: 'Price Details';
+  };
+  attributes: {
+    base_price_per_adult: Schema.Attribute.String;
+    discount_percentage: Schema.Attribute.Integer;
+    offer_price_per_adult: Schema.Attribute.String;
+    price_per_room: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsRouteCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_route_cards';
   info: {
@@ -701,6 +926,17 @@ export interface ElementsTestimonialCard extends Struct.ComponentSchema {
     location: Schema.Attribute.String & Schema.Attribute.Required;
     testimonial: Schema.Attribute.Text & Schema.Attribute.Required;
     user: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsTitleDesc extends Struct.ComponentSchema {
+  collectionName: 'components_elements_title_descs';
+  info: {
+    displayName: 'Title Desc';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -827,10 +1063,16 @@ declare module '@strapi/strapi' {
       'blocks.home-package-section': BlocksHomePackageSection;
       'blocks.image-hero-section': BlocksImageHeroSection;
       'blocks.info-block': BlocksInfoBlock;
+      'blocks.internal-link-section': BlocksInternalLinkSection;
       'blocks.map-section': BlocksMapSection;
       'blocks.offices-section': BlocksOfficesSection;
       'blocks.our-journey': BlocksOurJourney;
+      'blocks.package-day-chart': BlocksPackageDayChart;
+      'blocks.package-general-info': BlocksPackageGeneralInfo;
+      'blocks.package-inc-and-exc': BlocksPackageIncAndExc;
       'blocks.package-includes-section': BlocksPackageIncludesSection;
+      'blocks.package-itinerary': BlocksPackageItinerary;
+      'blocks.package-policies': BlocksPackagePolicies;
       'blocks.pd-listing-hero-section': BlocksPdListingHeroSection;
       'blocks.reels-section': BlocksReelsSection;
       'blocks.route-section': BlocksRouteSection;
@@ -841,22 +1083,33 @@ declare module '@strapi/strapi' {
       'elements.award-card': ElementsAwardCard;
       'elements.contact-info': ElementsContactInfo;
       'elements.cover': ElementsCover;
+      'elements.day-chart-card': ElementsDayChartCard;
+      'elements.duration': ElementsDuration;
       'elements.faq-card': ElementsFaqCard;
       'elements.featured-in-card': ElementsFeaturedInCard;
       'elements.gallery-card': ElementsGalleryCard;
       'elements.global-tour-card': ElementsGlobalTourCard;
       'elements.guide-card': ElementsGuideCard;
       'elements.hover-card': ElementsHoverCard;
+      'elements.inc-exc-card': ElementsIncExcCard;
       'elements.info-card': ElementsInfoCard;
       'elements.journey-card': ElementsJourneyCard;
+      'elements.label-with-icon': ElementsLabelWithIcon;
       'elements.labels': ElementsLabels;
       'elements.link': ElementsLink;
+      'elements.location-details': ElementsLocationDetails;
       'elements.logo': ElementsLogo;
       'elements.logo-link': ElementsLogoLink;
       'elements.office-chip': ElementsOfficeChip;
+      'elements.package-card-banner': ElementsPackageCardBanner;
+      'elements.package-terms-and-condition': ElementsPackageTermsAndCondition;
+      'elements.pay-with': ElementsPayWith;
+      'elements.policy-card': ElementsPolicyCard;
+      'elements.price-details': ElementsPriceDetails;
       'elements.route-card': ElementsRouteCard;
       'elements.tab-slide': ElementsTabSlide;
       'elements.testimonial-card': ElementsTestimonialCard;
+      'elements.title-desc': ElementsTitleDesc;
       'elements.why-us-card': ElementsWhyUsCard;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;

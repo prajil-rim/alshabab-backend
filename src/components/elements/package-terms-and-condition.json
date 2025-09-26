@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_package_terms_and_conditions",
+  "info": {
+    "displayName": "Package Terms & Condition"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "terms": {
+      "type": "component",
+      "component": "elements.inc-exc-card",
+      "repeatable": true
+    },
+    "disclaimer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

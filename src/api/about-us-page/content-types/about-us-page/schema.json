@@ -18,119 +18,123 @@
   "attributes": {
     "hero": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.image-hero-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.image-hero-section",
+      "repeatable": false
     },
     "section_1": {
-      "displayName": "About Us Section 1",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.about-us-section-1",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.about-us-section-1",
+      "repeatable": false
     },
     "our_journey_section": {
-      "displayName": "Our Journey",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.our-journey",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.our-journey",
+      "repeatable": false
     },
     "guides_section": {
-      "displayName": "Guides Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.guides-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.guides-section",
+      "repeatable": false
     },
     "awards_section": {
-      "displayName": "Awards Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.awards-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.awards-section",
+      "repeatable": false
     },
     "experiences_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.home-package-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.home-package-section",
+      "repeatable": false
     },
     "featured_in_section": {
-      "displayName": "Featured In Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.featured-in-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.featured-in-section",
+      "repeatable": false
     },
     "footer_cta_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.footer-cta-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
     },
     "purpose": {
       "type": "component",
-      "repeatable": true,
-      "component": "blocks.info-block",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.info-block",
+      "repeatable": true
     },
     "map_section": {
-      "displayName": "Map Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.map-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.map-section",
+      "repeatable": false
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "internal_links": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.internal-link-section",
+      "repeatable": false
     }
   }
 }

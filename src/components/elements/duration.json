@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_durations",
+  "info": {
+    "displayName": "Duration"
+  },
+  "options": {},
+  "attributes": {
+    "number_of_nights": {
+      "type": "integer"
+    },
+    "number_of_days": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

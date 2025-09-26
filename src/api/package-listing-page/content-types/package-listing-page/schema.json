@@ -18,84 +18,93 @@
   "attributes": {
     "hero": {
       "type": "component",
-      "repeatable": true,
-      "component": "blocks.pd-listing-hero-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.pd-listing-hero-section",
+      "repeatable": true
     },
     "packages": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.home-package-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.home-package-section",
+      "repeatable": false
     },
     "form_section": {
-      "displayName": "Form With Points Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.form-with-points-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.form-with-points-section",
+      "repeatable": false
     },
     "popular_packages": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.tab-slider-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.tab-slider-section",
+      "repeatable": false
     },
     "blog_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.blog-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.blog-section",
+      "repeatable": false
     },
     "footer_cta_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.footer-cta-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "shared.seo",
+      "repeatable": false
     },
     "faq_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.faq-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.faq-section",
+      "repeatable": false
+    },
+    "internal_links": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.internal-link-section",
+      "repeatable": false
     }
   }
 }

@@ -1,9 +1,9 @@
-module.exports = {
+export default {
     routes: [
         {
             method: "GET",
-            path: "/packages/:slug",
-            handler: "package.findOne",
+            path: "/parent-packages/:slug",
+            handler: "parent-package.findOne",
             config: {
                 auth: false,
             },

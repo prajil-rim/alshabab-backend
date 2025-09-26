@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_internal_link_sections",
+  "info": {
+    "displayName": "Internal Link Section",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

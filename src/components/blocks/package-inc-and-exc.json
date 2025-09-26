@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_package_inc_and_excs",
+  "info": {
+    "displayName": "Package Inc & Exc"
+  },
+  "options": {},
+  "attributes": {
+    "inclusion": {
+      "type": "component",
+      "component": "elements.inc-exc-card",
+      "repeatable": false
+    },
+    "exclusion": {
+      "type": "component",
+      "component": "elements.inc-exc-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

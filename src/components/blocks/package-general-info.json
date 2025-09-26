@@ -1,0 +1,76 @@
+{
+  "collectionName": "components_blocks_package_general_infos",
+  "info": {
+    "displayName": "Package General Info"
+  },
+  "options": {},
+  "attributes": {
+    "flights": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "With Flight",
+        "Without Flight"
+      ]
+    },
+    "duration": {
+      "type": "component",
+      "component": "elements.duration",
+      "repeatable": false
+    },
+    "location_details": {
+      "type": "component",
+      "component": "elements.location-details",
+      "repeatable": false
+    },
+    "pay_with": {
+      "type": "component",
+      "component": "elements.pay-with",
+      "repeatable": false
+    },
+    "price_details": {
+      "type": "component",
+      "component": "elements.price-details",
+      "repeatable": false
+    },
+    "package_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package-category.package-category"
+    },
+    "price_category": {
+      "type": "string"
+    },
+    "from_city": {
+      "type": "string"
+    },
+    "call_us_on": {
+      "type": "string"
+    },
+    "timing": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "more_about_trip": {
+      "type": "component",
+      "component": "elements.title-desc",
+      "repeatable": false
+    },
+    "package_includes": {
+      "type": "component",
+      "component": "elements.label-with-icon",
+      "repeatable": true
+    },
+    "form_modal_title": {
+      "type": "string",
+      "required": true
+    },
+    "form_modal_phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

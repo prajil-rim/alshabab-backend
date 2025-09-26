@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "destination_listing_pages",
+  "collectionName": "international_package_listing_pages",
   "info": {
-    "singularName": "destination-listing-page",
-    "pluralName": "destination-listing-pages",
-    "displayName": "Destination Listing Page",
-    "description": ""
+    "singularName": "international-package-listing-page",
+    "pluralName": "international-package-listing-pages",
+    "displayName": "International Package Listing Page"
   },
   "options": {
     "draftAndPublish": true
@@ -23,10 +22,10 @@
           "localized": true
         }
       },
-      "component": "blocks.pd-listing-hero-section",
-      "repeatable": true
+      "component": "blocks.image-hero-section",
+      "repeatable": false
     },
-    "destinations": {
+    "packages": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -46,7 +45,7 @@
       "component": "blocks.form-with-points-section",
       "repeatable": false
     },
-    "popular_destinations": {
+    "popular_packages": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -74,16 +73,6 @@
         }
       },
       "component": "blocks.footer-cta-section",
-      "repeatable": false
-    },
-    "global_tour_section": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "blocks.globar-tour-section",
       "repeatable": false
     },
     "seo": {

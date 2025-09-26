@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_day_chart_cards",
+  "info": {
+    "displayName": "Day Chart Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

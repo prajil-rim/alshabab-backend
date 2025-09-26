@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "package_forms",
+  "info": {
+    "singularName": "package-form",
+    "pluralName": "package-forms",
+    "displayName": "Package Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "package": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "travelDate": {
+      "type": "string"
+    }
+  }
+}

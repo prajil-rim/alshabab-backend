@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "parent_packages",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "Blog",
-    "description": ""
+    "singularName": "parent-package",
+    "pluralName": "parent-packages",
+    "displayName": "Parent Package"
   },
   "options": {
     "draftAndPublish": true
@@ -16,61 +15,7 @@
     }
   },
   "attributes": {
-    "blog_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "blog": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "author": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "profession": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "image": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "elements.logo",
-      "repeatable": false
-    },
-    "quote": {
+    "package": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -78,54 +23,52 @@
         }
       }
     },
-    "socials": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "elements.logo-link",
-      "repeatable": true
-    },
-    "share_socials": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "elements.logo-link",
-      "repeatable": true
-    },
-    "slug": {
+    "package_slug": {
       "type": "uid",
-      "targetField": "blog_title",
-      "required": true
-    },
-    "blog_summary": {
-      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
+      "targetField": "package"
     },
-    "hero": {
+    "hero_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "hero_description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "hero_background": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "testimonial": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "blocks.blog-hero-section",
+      "component": "blocks.testimonial-section",
       "repeatable": false
-    },
-    "blog_category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::blog-category.blog-category"
     },
     "footer_cta_section": {
       "type": "component",
@@ -137,10 +80,42 @@
       "component": "blocks.footer-cta-section",
       "repeatable": false
     },
-    "recommended_blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog"
+    "whatsapp_number": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "package_card_banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.package-card-banner",
+      "repeatable": false
+    },
+    "package_banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.package-card-banner",
+      "repeatable": false
+    },
+    "destination": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     },
     "seo": {
       "type": "component",

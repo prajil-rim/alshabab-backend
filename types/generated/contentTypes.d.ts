@@ -438,6 +438,15 @@ export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -568,6 +577,15 @@ export interface ApiBlogPageBlogPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -660,6 +678,15 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         };
       }>;
     image: Schema.Attribute.Component<'elements.logo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -831,6 +858,15 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -928,6 +964,15 @@ export interface ApiDestinationListingPageDestinationListingPage
         };
       }>;
     hero: Schema.Attribute.Component<'blocks.pd-listing-hero-section', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1047,6 +1092,15 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
         };
       }>;
     info_section: Schema.Attribute.Component<'blocks.info-block', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1223,6 +1277,15 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1295,6 +1358,148 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInternationalPackageListingPageInternationalPackageListingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'international_package_listing_pages';
+  info: {
+    displayName: 'International Package Listing Page';
+    pluralName: 'international-package-listing-pages';
+    singularName: 'international-package-listing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    blog_section: Schema.Attribute.Component<'blocks.blog-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    form_section: Schema.Attribute.Component<
+      'blocks.form-with-points-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero: Schema.Attribute.Component<'blocks.image-hero-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::international-package-listing-page.international-package-listing-page'
+    >;
+    packages: Schema.Attribute.Component<'blocks.home-package-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    popular_packages: Schema.Attribute.Component<
+      'blocks.tab-slider-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPackageCategoryPackageCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'package_categories';
+  info: {
+    displayName: 'Package Category';
+    pluralName: 'package-categories';
+    singularName: 'package-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::package-category.package-category'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'category'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPackageConsultationFormPackageConsultationForm
   extends Struct.CollectionTypeSchema {
   collectionName: 'package_consultation_forms';
@@ -1323,6 +1528,40 @@ export interface ApiPackageConsultationFormPackageConsultationForm
     package: Schema.Attribute.Relation<'oneToOne', 'api::package.package'>;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPackageFormPackageForm extends Struct.CollectionTypeSchema {
+  collectionName: 'package_forms';
+  info: {
+    displayName: 'Package Form';
+    pluralName: 'package-forms';
+    singularName: 'package-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    fullname: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::package-form.package-form'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    origin: Schema.Attribute.String;
+    package: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    travelDate: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1381,6 +1620,15 @@ export interface ApiPackageListingPagePackageListingPage
         };
       }>;
     hero: Schema.Attribute.Component<'blocks.pd-listing-hero-section', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1476,6 +1724,15 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1483,6 +1740,33 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
     >;
     package: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_day_chart: Schema.Attribute.Component<
+      'blocks.package-day-chart',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_general_info: Schema.Attribute.Component<
+      'blocks.package-general-info',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_inc_and_exc: Schema.Attribute.Component<
+      'blocks.package-inc-and-exc',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1497,12 +1781,34 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    package_itinerary: Schema.Attribute.Component<
+      'blocks.package-itinerary',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_policies: Schema.Attribute.Component<
+      'blocks.package-policies',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     packages_for: Schema.Attribute.Component<'elements.labels', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    parentPackage: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::parent-package.parent-package'
+    >;
     price: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1551,6 +1857,132 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiParentPackageParentPackage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'parent_packages';
+  info: {
+    displayName: 'Parent Package';
+    pluralName: 'parent-packages';
+    singularName: 'parent-package';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    destination: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_background: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::parent-package.parent-package'
+    >;
+    package: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_banner: Schema.Attribute.Component<
+      'elements.package-card-banner',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_card_banner: Schema.Attribute.Component<
+      'elements.package-card-banner',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    package_slug: Schema.Attribute.UID<'package'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    testimonial: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whatsapp_number: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -2205,9 +2637,13 @@ declare module '@strapi/strapi' {
       'api::destination.destination': ApiDestinationDestination;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::international-package-listing-page.international-package-listing-page': ApiInternationalPackageListingPageInternationalPackageListingPage;
+      'api::package-category.package-category': ApiPackageCategoryPackageCategory;
       'api::package-consultation-form.package-consultation-form': ApiPackageConsultationFormPackageConsultationForm;
+      'api::package-form.package-form': ApiPackageFormPackageForm;
       'api::package-listing-page.package-listing-page': ApiPackageListingPagePackageListingPage;
       'api::package.package': ApiPackagePackage;
+      'api::parent-package.parent-package': ApiParentPackageParentPackage;
       'api::partner-section.partner-section': ApiPartnerSectionPartnerSection;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::trending-search.trending-search': ApiTrendingSearchTrendingSearch;

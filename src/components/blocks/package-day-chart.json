@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_package_day_charts",
+  "info": {
+    "displayName": "Package Day Chart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "day_chart_card": {
+      "type": "component",
+      "component": "elements.day-chart-card",
+      "repeatable": true,
+      "max": 4
+    }
+  },
+  "config": {}
+}

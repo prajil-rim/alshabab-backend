@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_price_details",
+  "info": {
+    "displayName": "Price Details"
+  },
+  "options": {},
+  "attributes": {
+    "base_price_per_adult": {
+      "type": "string"
+    },
+    "offer_price_per_adult": {
+      "type": "string"
+    },
+    "price_per_room": {
+      "type": "string"
+    },
+    "discount_percentage": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

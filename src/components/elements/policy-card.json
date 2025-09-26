@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_policy_cards",
+  "info": {
+    "displayName": "Policy Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "column_1": {
+      "type": "component",
+      "component": "elements.labels",
+      "repeatable": true
+    },
+    "column_2": {
+      "type": "component",
+      "component": "elements.labels",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

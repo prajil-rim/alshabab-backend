@@ -18,54 +18,52 @@
   "attributes": {
     "package": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "hero": {
-      "displayName": "Image Hero Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.image-hero-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.image-hero-section",
+      "repeatable": false
     },
     "package_includes_section": {
-      "displayName": "Package Includes Section",
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.package-includes-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.package-includes-section",
+      "repeatable": false
     },
     "trip_details": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.experience-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.experience-section",
+      "repeatable": false
     },
     "footer_cta_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.footer-cta-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
     },
     "slug": {
       "type": "uid",
@@ -81,52 +79,51 @@
     },
     "price_per": {
       "type": "string",
-      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": false
     },
     "packages_for": {
-      "displayName": "Labels",
       "type": "component",
-      "repeatable": true,
-      "component": "elements.labels",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "elements.labels",
+      "repeatable": true
     },
     "form_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.form-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.form-section",
+      "repeatable": false
     },
     "blog_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.blog-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.blog-section",
+      "repeatable": false
     },
     "summary": {
       "type": "text",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "destination": {
       "type": "relation",
@@ -136,33 +133,98 @@
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "shared.seo",
+      "repeatable": false
     },
     "faq_section": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.faq-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.faq-section",
+      "repeatable": false
     },
     "testimonials": {
       "type": "component",
-      "repeatable": false,
-      "component": "blocks.testimonial-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "package_general_info": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.package-general-info",
+      "repeatable": false
+    },
+    "package_itinerary": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.package-itinerary",
+      "repeatable": true
+    },
+    "package_day_chart": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.package-day-chart",
+      "repeatable": true
+    },
+    "package_inc_and_exc": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.package-inc-and-exc",
+      "repeatable": false
+    },
+    "package_policies": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.package-policies",
+      "repeatable": false
+    },
+    "parentPackage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parent-package.parent-package"
+    },
+    "internal_links": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.internal-link-section",
+      "repeatable": false
     }
   }
 }

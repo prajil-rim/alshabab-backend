@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_package_policies",
+  "info": {
+    "displayName": "Package Policies"
+  },
+  "options": {},
+  "attributes": {
+    "cancellation_policy": {
+      "type": "component",
+      "component": "elements.policy-card",
+      "repeatable": false
+    },
+    "payment_policy": {
+      "type": "component",
+      "component": "elements.policy-card",
+      "repeatable": false
+    },
+    "payment_policy_points": {
+      "type": "component",
+      "component": "elements.labels",
+      "repeatable": true
+    },
+    "term_and_conditions": {
+      "type": "component",
+      "component": "elements.package-terms-and-condition",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_pay_withs",
+  "info": {
+    "displayName": "Pay With"
+  },
+  "options": {},
+  "attributes": {
+    "tabby": {
+      "type": "boolean"
+    },
+    "tamara": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

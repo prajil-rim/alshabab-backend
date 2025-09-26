@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_label_with_icons",
+  "info": {
+    "displayName": "Label with Icon"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
