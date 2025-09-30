@@ -1880,7 +1880,11 @@ export interface ApiParentPackageParentPackage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    destination: Schema.Attribute.String &
+    destination: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::destination.destination'
+    >;
+    destination_label: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

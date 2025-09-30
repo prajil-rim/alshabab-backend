@@ -108,7 +108,7 @@
       "component": "elements.package-card-banner",
       "repeatable": false
     },
-    "destination": {
+    "destination_label": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -136,6 +136,11 @@
       },
       "component": "blocks.internal-link-section",
       "repeatable": false
+    },
+    "destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::destination.destination"
     }
   }
 }
