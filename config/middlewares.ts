@@ -7,7 +7,11 @@ export default [
             contentSecurityPolicy: {
                 useDefaults: true,
                 directives: {
-                    "connect-src": ["'self'", "https:"],
+                    "connect-src": [
+                        "'self'",
+                        "https:",
+                        "https://proxy-event.ckeditor.com",
+                    ],
                     "img-src": [
                         "'self'",
                         "data:",
@@ -23,6 +27,7 @@ export default [
                         "res.cloudinary.com",
                     ],
                     upgradeInsecureRequests: null,
+                    "script-src": ["https://cdn.ckeditor.com"],
                 },
             },
         },

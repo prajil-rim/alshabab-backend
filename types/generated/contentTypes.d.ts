@@ -1877,6 +1877,20 @@ export interface ApiParentPackageParentPackage
     };
   };
   attributes: {
+    contents: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3OTQwOTU5OTksImp0aSI6IjM0NDgxMjIwLTQ0ZmYtNDE1ZC04NjU0LWFjZTVmNGRkZjQyMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJmN2IzYWJiYSJ9.ytkeS4PdKppgNhiIy-Ga8f1_PVmGGghaBO1KR07cd6P1ppoWr51UPvIhFCuDMmcP9X3A_eV_Vdut8ICVLG0dwg';
+          output: 'HTML';
+          preset: 'standard';
+        }
+      > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
