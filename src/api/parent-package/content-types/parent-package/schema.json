@@ -135,7 +135,7 @@
         }
       },
       "component": "blocks.internal-link-section",
-      "repeatable": false
+      "repeatable": true
     },
     "destination": {
       "type": "relation",

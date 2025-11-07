@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visa_pages",
+  "info": {
+    "singularName": "visa-page",
+    "pluralName": "visa-pages",
+    "displayName": "Visa Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.image-hero-section",
+      "repeatable": false
+    },
+    "contents": {
+      "type": "component",
+      "component": "blocks.visa-content",
+      "repeatable": true
+    }
+  }
+}

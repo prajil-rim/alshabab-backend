@@ -553,6 +553,19 @@ export interface BlocksTestimonialSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksVisaContent extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_visa_contents';
+  info: {
+    displayName: 'Visa Content';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    sub_heading: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksWhyUsSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_why_us_sections';
   info: {
@@ -1079,6 +1092,7 @@ declare module '@strapi/strapi' {
       'blocks.stays-section': BlocksStaysSection;
       'blocks.tab-slider-section': BlocksTabSliderSection;
       'blocks.testimonial-section': BlocksTestimonialSection;
+      'blocks.visa-content': BlocksVisaContent;
       'blocks.why-us-section': BlocksWhyUsSection;
       'elements.award-card': ElementsAwardCard;
       'elements.contact-info': ElementsContactInfo;

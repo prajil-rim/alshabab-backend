@@ -1920,7 +1920,7 @@ export interface ApiParentPackageParentPackage
       }>;
     internal_links: Schema.Attribute.Component<
       'blocks.internal-link-section',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2112,6 +2112,35 @@ export interface ApiTrendingSearchTrendingSearch
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::trending-search.trending-search'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVisaPageVisaPage extends Struct.CollectionTypeSchema {
+  collectionName: 'visa_pages';
+  info: {
+    displayName: 'Visa Page';
+    pluralName: 'visa-pages';
+    singularName: 'visa-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contents: Schema.Attribute.Component<'blocks.visa-content', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'blocks.image-hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visa-page.visa-page'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -2651,6 +2680,7 @@ declare module '@strapi/strapi' {
       'api::partner-section.partner-section': ApiPartnerSectionPartnerSection;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::trending-search.trending-search': ApiTrendingSearchTrendingSearch;
+      'api::visa-page.visa-page': ApiVisaPageVisaPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
