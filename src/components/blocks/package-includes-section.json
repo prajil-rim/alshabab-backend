@@ -14,10 +14,10 @@
       "type": "text",
       "required": true
     },
-    "package_includes": {
+    "trip_highlights": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.hover-card"
+      "component": "elements.hover-card",
+      "repeatable": true
     }
   }
 }

@@ -439,8 +439,8 @@ export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    package_includes: Schema.Attribute.Component<'elements.hover-card', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    trip_highlights: Schema.Attribute.Component<'elements.hover-card', true>;
   };
 }
 

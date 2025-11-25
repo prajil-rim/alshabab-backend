@@ -1772,15 +1772,6 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    package_includes_section: Schema.Attribute.Component<
-      'blocks.package-includes-section',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     package_itinerary: Schema.Attribute.Component<
       'blocks.package-itinerary',
       true
@@ -1847,6 +1838,15 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
       }>;
     trip_details: Schema.Attribute.Component<
       'blocks.experience-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trip_highlights_section: Schema.Attribute.Component<
+      'blocks.package-includes-section',
       false
     > &
       Schema.Attribute.SetPluginOptions<{
