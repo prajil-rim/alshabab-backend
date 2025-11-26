@@ -6,10 +6,12 @@
   "options": {},
   "attributes": {
     "base_price_per_adult": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "offer_price_per_adult": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "price_per_room": {
       "type": "string"

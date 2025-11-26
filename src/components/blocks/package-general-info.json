@@ -16,22 +16,26 @@
     "duration": {
       "type": "component",
       "component": "elements.duration",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "location_details": {
       "type": "component",
       "component": "elements.location-details",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "pay_with": {
       "type": "component",
       "component": "elements.pay-with",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "price_details": {
       "type": "component",
       "component": "elements.price-details",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "package_categories": {
       "type": "relation",
@@ -42,16 +46,19 @@
       "type": "string"
     },
     "from_city": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "call_us_on": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "timing": {
       "type": "string"
     },
     "whatsapp": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "more_about_trip": {
       "type": "component",

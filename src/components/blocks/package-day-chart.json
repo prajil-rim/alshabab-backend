@@ -6,12 +6,14 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "day_chart_card": {
       "type": "component",
       "component": "elements.day-chart-card",
       "repeatable": true,
+      "required": true,
       "max": 4
     }
   },

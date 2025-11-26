@@ -1791,6 +1791,7 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
         };
       }>;
     packages_for: Schema.Attribute.Component<'elements.labels', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1801,12 +1802,14 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
       'api::parent-package.parent-package'
     >;
     price: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     price_per: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1819,7 +1822,7 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    slug: Schema.Attribute.UID<'package'>;
+    slug: Schema.Attribute.UID<'package'> & Schema.Attribute.Required;
     summary: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

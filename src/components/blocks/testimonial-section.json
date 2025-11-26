@@ -15,8 +15,9 @@
     },
     "testimonials": {
       "type": "component",
+      "component": "elements.testimonial-card",
       "repeatable": true,
-      "component": "elements.testimonial-card"
+      "required": true
     }
   }
 }

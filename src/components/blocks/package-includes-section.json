@@ -17,7 +17,8 @@
     "trip_highlights": {
       "type": "component",
       "component": "elements.hover-card",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     }
   }
 }

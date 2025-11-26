@@ -6,15 +6,18 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "terms": {
       "type": "component",
       "component": "elements.inc-exc-card",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "disclaimer": {
       "type": "text"

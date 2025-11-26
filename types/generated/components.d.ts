@@ -122,7 +122,8 @@ export interface BlocksExperienceSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    details: Schema.Attribute.Component<'blocks.info-block', true>;
+    details: Schema.Attribute.Component<'blocks.info-block', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -135,7 +136,8 @@ export interface BlocksFaqSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    faqs: Schema.Attribute.Component<'elements.faq-card', true>;
+    faqs: Schema.Attribute.Component<'elements.faq-card', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -319,7 +321,8 @@ export interface BlocksInternalLinkSection extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    links: Schema.Attribute.Component<'elements.link', true>;
+    links: Schema.Attribute.Component<'elements.link', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -376,13 +379,14 @@ export interface BlocksPackageDayChart extends Struct.ComponentSchema {
       'elements.day-chart-card',
       true
     > &
+      Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
         {
           max: 4;
         },
         number
       >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -392,17 +396,19 @@ export interface BlocksPackageGeneralInfo extends Struct.ComponentSchema {
     displayName: 'Package General Info';
   };
   attributes: {
-    call_us_on: Schema.Attribute.String;
-    duration: Schema.Attribute.Component<'elements.duration', false>;
+    call_us_on: Schema.Attribute.String & Schema.Attribute.Required;
+    duration: Schema.Attribute.Component<'elements.duration', false> &
+      Schema.Attribute.Required;
     flights: Schema.Attribute.Enumeration<['With Flight', 'Without Flight']> &
       Schema.Attribute.Required;
     form_modal_phone: Schema.Attribute.String & Schema.Attribute.Required;
     form_modal_title: Schema.Attribute.String & Schema.Attribute.Required;
-    from_city: Schema.Attribute.String;
+    from_city: Schema.Attribute.String & Schema.Attribute.Required;
     location_details: Schema.Attribute.Component<
       'elements.location-details',
       false
-    >;
+    > &
+      Schema.Attribute.Required;
     more_about_trip: Schema.Attribute.Component<'elements.title-desc', false>;
     package_categories: Schema.Attribute.Relation<
       'oneToMany',
@@ -412,11 +418,13 @@ export interface BlocksPackageGeneralInfo extends Struct.ComponentSchema {
       'elements.label-with-icon',
       true
     >;
-    pay_with: Schema.Attribute.Component<'elements.pay-with', false>;
+    pay_with: Schema.Attribute.Component<'elements.pay-with', false> &
+      Schema.Attribute.Required;
     price_category: Schema.Attribute.String;
-    price_details: Schema.Attribute.Component<'elements.price-details', false>;
+    price_details: Schema.Attribute.Component<'elements.price-details', false> &
+      Schema.Attribute.Required;
     timing: Schema.Attribute.String;
-    whatsapp: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -440,7 +448,8 @@ export interface BlocksPackageIncludesSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    trip_highlights: Schema.Attribute.Component<'elements.hover-card', true>;
+    trip_highlights: Schema.Attribute.Component<'elements.hover-card', true> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -450,9 +459,9 @@ export interface BlocksPackageItinerary extends Struct.ComponentSchema {
     displayName: 'Package Itinerary';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    images: Schema.Attribute.Media<'images', true>;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -548,7 +557,11 @@ export interface BlocksTestimonialSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    testimonials: Schema.Attribute.Component<'elements.testimonial-card', true>;
+    testimonials: Schema.Attribute.Component<
+      'elements.testimonial-card',
+      true
+    > &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -625,8 +638,8 @@ export interface ElementsDayChartCard extends Struct.ComponentSchema {
     displayName: 'Day Chart Card';
   };
   attributes: {
-    description: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -728,8 +741,9 @@ export interface ElementsIncExcCard extends Struct.ComponentSchema {
     displayName: 'Inc Exc Card';
   };
   attributes: {
-    points: Schema.Attribute.Component<'elements.labels', true>;
-    title: Schema.Attribute.String;
+    points: Schema.Attribute.Component<'elements.labels', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -766,7 +780,7 @@ export interface ElementsLabelWithIcon extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -860,10 +874,11 @@ export interface ElementsPackageTermsAndCondition
     displayName: 'Package Terms & Condition';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     disclaimer: Schema.Attribute.Text;
-    terms: Schema.Attribute.Component<'elements.inc-exc-card', true>;
-    title: Schema.Attribute.String;
+    terms: Schema.Attribute.Component<'elements.inc-exc-card', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -884,9 +899,11 @@ export interface ElementsPolicyCard extends Struct.ComponentSchema {
     displayName: 'Policy Card';
   };
   attributes: {
-    column_1: Schema.Attribute.Component<'elements.labels', true>;
-    column_2: Schema.Attribute.Component<'elements.labels', true>;
-    title: Schema.Attribute.String;
+    column_1: Schema.Attribute.Component<'elements.labels', true> &
+      Schema.Attribute.Required;
+    column_2: Schema.Attribute.Component<'elements.labels', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -896,9 +913,9 @@ export interface ElementsPriceDetails extends Struct.ComponentSchema {
     displayName: 'Price Details';
   };
   attributes: {
-    base_price_per_adult: Schema.Attribute.String;
+    base_price_per_adult: Schema.Attribute.String & Schema.Attribute.Required;
     discount_percentage: Schema.Attribute.Integer;
-    offer_price_per_adult: Schema.Attribute.String;
+    offer_price_per_adult: Schema.Attribute.String & Schema.Attribute.Required;
     price_per_room: Schema.Attribute.String;
   };
 }

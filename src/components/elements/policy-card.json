@@ -6,17 +6,20 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "column_1": {
       "type": "component",
       "component": "elements.labels",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "column_2": {
       "type": "component",
       "component": "elements.labels",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     }
   },
   "config": {}

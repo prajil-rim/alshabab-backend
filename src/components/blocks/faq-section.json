@@ -16,8 +16,9 @@
     },
     "faqs": {
       "type": "component",
+      "component": "elements.faq-card",
       "repeatable": true,
-      "component": "elements.faq-card"
+      "required": true
     }
   }
 }

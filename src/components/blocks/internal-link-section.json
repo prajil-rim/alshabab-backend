@@ -13,7 +13,8 @@
     "links": {
       "type": "component",
       "component": "elements.link",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     }
   },
   "config": {}

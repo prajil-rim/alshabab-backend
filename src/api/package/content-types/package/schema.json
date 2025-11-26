@@ -67,7 +67,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "package"
+      "targetField": "package",
+      "required": true
     },
     "price": {
       "type": "integer",
@@ -75,7 +76,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "price_per": {
       "type": "string",
@@ -84,7 +86,7 @@
           "localized": true
         }
       },
-      "required": false
+      "required": true
     },
     "packages_for": {
       "type": "component",
@@ -94,7 +96,8 @@
         }
       },
       "component": "elements.labels",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "form_section": {
       "type": "component",

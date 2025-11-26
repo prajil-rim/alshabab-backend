@@ -15,8 +15,9 @@
     },
     "details": {
       "type": "component",
+      "component": "blocks.info-block",
       "repeatable": true,
-      "component": "blocks.info-block"
+      "required": true
     }
   }
 }
