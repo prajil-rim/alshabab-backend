@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_elements_team_visa_cards",
+  "info": {
+    "displayName": "Team Visa Card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "specialization": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text",
+      "minLength": 65,
+      "maxLength": 120,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "social_links": {
+      "type": "component",
+      "component": "elements.logo-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_visa_team_sections",
+  "info": {
+    "displayName": "Visa Team Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "teams": {
+      "type": "component",
+      "component": "elements.team-visa-card",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    }
+  },
+  "config": {}
+}

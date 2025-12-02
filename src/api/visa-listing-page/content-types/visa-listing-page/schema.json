@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "visa_listing_pages",
+  "info": {
+    "singularName": "visa-listing-page",
+    "pluralName": "visa-listing-pages",
+    "displayName": "Visa Listing Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.image-hero-section",
+      "repeatable": false
+    },
+    "core_services_section": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.core-services-section",
+      "repeatable": false
+    },
+    "contents": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3OTQwOTU5OTksImp0aSI6IjM0NDgxMjIwLTQ0ZmYtNDE1ZC04NjU0LWFjZTVmNGRkZjQyMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJmN2IzYWJiYSJ9.ytkeS4PdKppgNhiIy-Ga8f1_PVmGGghaBO1KR07cd6P1ppoWr51UPvIhFCuDMmcP9X3A_eV_Vdut8ICVLG0dwg",
+        "preset": "standard"
+      },
+      "required": true
+    }
+  }
+}

@@ -85,6 +85,38 @@ export interface BlocksBlogsListSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksCoreServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_core_services_sections';
+  info: {
+    displayName: 'Core Services Section';
+  };
+  attributes: {
+    core_services_table: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3OTQwOTU5OTksImp0aSI6IjM0NDgxMjIwLTQ0ZmYtNDE1ZC04NjU0LWFjZTVmNGRkZjQyMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJmN2IzYWJiYSJ9.ytkeS4PdKppgNhiIy-Ga8f1_PVmGGghaBO1KR07cd6P1ppoWr51UPvIhFCuDMmcP9X3A_eV_Vdut8ICVLG0dwg';
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    cta_button: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksCoreServicesTable extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_core_services_tables';
+  info: {
+    displayName: 'Core Services Table';
+  };
+  attributes: {
+    test: Schema.Attribute.RichText;
+  };
+}
+
 export interface BlocksDealsSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_deals_sections';
   info: {
@@ -579,6 +611,38 @@ export interface BlocksVisaContent extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksVisaHero extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_visa_heroes';
+  info: {
+    displayName: 'Visa Hero';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    button: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksVisaTeamSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_visa_team_sections';
+  info: {
+    displayName: 'Visa Team Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    teams: Schema.Attribute.Component<'elements.team-visa-card', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksWhyUsSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_why_us_sections';
   info: {
@@ -946,6 +1010,27 @@ export interface ElementsTabSlide extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTeamVisaCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_team_visa_cards';
+  info: {
+    displayName: 'Team Visa Card';
+  };
+  attributes: {
+    bio: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 120;
+        minLength: 65;
+      }>;
+    experience: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+    social_links: Schema.Attribute.Component<'elements.logo-link', true>;
+    specialization: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsTestimonialCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_testimonial_cards';
   info: {
@@ -1077,6 +1162,8 @@ declare module '@strapi/strapi' {
       'blocks.blog-hero-section': BlocksBlogHeroSection;
       'blocks.blog-section': BlocksBlogSection;
       'blocks.blogs-list-section': BlocksBlogsListSection;
+      'blocks.core-services-section': BlocksCoreServicesSection;
+      'blocks.core-services-table': BlocksCoreServicesTable;
       'blocks.deals-section': BlocksDealsSection;
       'blocks.destination-hero-section': BlocksDestinationHeroSection;
       'blocks.experience-section': BlocksExperienceSection;
@@ -1110,6 +1197,8 @@ declare module '@strapi/strapi' {
       'blocks.tab-slider-section': BlocksTabSliderSection;
       'blocks.testimonial-section': BlocksTestimonialSection;
       'blocks.visa-content': BlocksVisaContent;
+      'blocks.visa-hero': BlocksVisaHero;
+      'blocks.visa-team-section': BlocksVisaTeamSection;
       'blocks.why-us-section': BlocksWhyUsSection;
       'elements.award-card': ElementsAwardCard;
       'elements.contact-info': ElementsContactInfo;
@@ -1139,6 +1228,7 @@ declare module '@strapi/strapi' {
       'elements.price-details': ElementsPriceDetails;
       'elements.route-card': ElementsRouteCard;
       'elements.tab-slide': ElementsTabSlide;
+      'elements.team-visa-card': ElementsTeamVisaCard;
       'elements.testimonial-card': ElementsTestimonialCard;
       'elements.title-desc': ElementsTitleDesc;
       'elements.why-us-card': ElementsWhyUsCard;

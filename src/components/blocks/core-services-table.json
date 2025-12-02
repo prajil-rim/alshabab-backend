@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_core_services_tables",
+  "info": {
+    "displayName": "Core Services Table"
+  },
+  "options": {},
+  "attributes": {
+    "test": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

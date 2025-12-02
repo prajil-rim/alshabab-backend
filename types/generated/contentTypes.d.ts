@@ -2138,6 +2138,68 @@ export interface ApiTrendingSearchTrendingSearch
   };
 }
 
+export interface ApiVisaListingPageVisaListingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'visa_listing_pages';
+  info: {
+    displayName: 'Visa Listing Page';
+    pluralName: 'visa-listing-pages';
+    singularName: 'visa-listing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    contents: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3OTQwOTU5OTksImp0aSI6IjM0NDgxMjIwLTQ0ZmYtNDE1ZC04NjU0LWFjZTVmNGRkZjQyMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJmN2IzYWJiYSJ9.ytkeS4PdKppgNhiIy-Ga8f1_PVmGGghaBO1KR07cd6P1ppoWr51UPvIhFCuDMmcP9X3A_eV_Vdut8ICVLG0dwg';
+          output: 'HTML';
+          preset: 'standard';
+        }
+      > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    core_services_section: Schema.Attribute.Component<
+      'blocks.core-services-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'blocks.image-hero-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visa-listing-page.visa-listing-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiVisaPageVisaPage extends Struct.CollectionTypeSchema {
   collectionName: 'visa_pages';
   info: {
@@ -2149,11 +2211,30 @@ export interface ApiVisaPageVisaPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    contents: Schema.Attribute.Component<'blocks.visa-content', true>;
+    contents: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3OTQwOTU5OTksImp0aSI6IjM0NDgxMjIwLTQ0ZmYtNDE1ZC04NjU0LWFjZTVmNGRkZjQyMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJmN2IzYWJiYSJ9.ytkeS4PdKppgNhiIy-Ga8f1_PVmGGghaBO1KR07cd6P1ppoWr51UPvIhFCuDMmcP9X3A_eV_Vdut8ICVLG0dwg';
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hero: Schema.Attribute.Component<'blocks.image-hero-section', false>;
+    disclaimer: Schema.Attribute.Text;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false>;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<'blocks.visa-hero', false>;
+    internal_links: Schema.Attribute.Component<
+      'blocks.internal-link-section',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2161,9 +2242,16 @@ export interface ApiVisaPageVisaPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'visa'> & Schema.Attribute.Required;
+    team_profile_section: Schema.Attribute.Component<
+      'blocks.visa-team-section',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visa: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -2697,6 +2785,7 @@ declare module '@strapi/strapi' {
       'api::partner-section.partner-section': ApiPartnerSectionPartnerSection;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::trending-search.trending-search': ApiTrendingSearchTrendingSearch;
+      'api::visa-listing-page.visa-listing-page': ApiVisaListingPageVisaListingPage;
       'api::visa-page.visa-page': ApiVisaPageVisaPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
