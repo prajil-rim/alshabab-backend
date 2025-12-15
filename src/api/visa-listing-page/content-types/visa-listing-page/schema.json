@@ -50,6 +50,36 @@
       },
       "required": true
     },
+    "testimonials": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "faq_section": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.faq-section",
+      "repeatable": false
+    },
+    "team_section": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.visa-team-section",
+      "repeatable": false
+    },
     "internal_links": {
       "type": "component",
       "pluginOptions": {

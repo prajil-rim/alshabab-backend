@@ -39,7 +39,11 @@ export default factories.createCoreController(
                 },
             };
 
-            if (packageCategories && (packageCategories as string).length > 0) {
+            if (
+                packageCategories &&
+                packageCategories !== "null" &&
+                (packageCategories as string).length > 0
+            ) {
                 // @ts-expect-error: package_categories is a relation
                 filter.package_general_info = {
                     package_categories: {
@@ -58,6 +62,7 @@ export default factories.createCoreController(
                     ...ctx.query,
                 }
             );
+
             return this.transformResponse(entries);
         },
     })

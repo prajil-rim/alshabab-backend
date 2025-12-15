@@ -38,6 +38,11 @@
       "type": "component",
       "component": "elements.logo-link",
       "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
     }
   },
   "config": {}

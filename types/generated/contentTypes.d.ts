@@ -2182,6 +2182,12 @@ export interface ApiVisaListingPageVisaListingPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<'blocks.faq-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     hero: Schema.Attribute.Component<'blocks.image-hero-section', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2204,6 +2210,24 @@ export interface ApiVisaListingPageVisaListingPage
     >;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    team_section: Schema.Attribute.Component<
+      'blocks.visa-team-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    testimonials: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2261,6 +2285,10 @@ export interface ApiVisaPageVisaPage extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'visa'> & Schema.Attribute.Required;
     team_profile_section: Schema.Attribute.Component<
       'blocks.visa-team-section',
+      false
+    >;
+    testimonials: Schema.Attribute.Component<
+      'blocks.testimonial-section',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;

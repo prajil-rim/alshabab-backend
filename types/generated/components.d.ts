@@ -1022,6 +1022,7 @@ export interface ElementsTeamVisaCard extends Struct.ComponentSchema {
         maxLength: 120;
         minLength: 65;
       }>;
+    button: Schema.Attribute.Component<'elements.link', false>;
     experience: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;

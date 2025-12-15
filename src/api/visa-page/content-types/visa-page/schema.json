@@ -40,6 +40,11 @@
       "component": "blocks.visa-team-section",
       "repeatable": false
     },
+    "testimonials": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
     "faq_section": {
       "type": "component",
       "component": "blocks.faq-section",
