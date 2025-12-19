@@ -24,6 +24,11 @@
       "type": "component",
       "component": "elements.package-terms-and-condition",
       "repeatable": false
+    },
+    "package_policies": {
+      "type": "component",
+      "component": "elements.labels",
+      "repeatable": true
     }
   },
   "config": {}

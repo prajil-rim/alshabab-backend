@@ -507,6 +507,7 @@ export interface BlocksPackagePolicies extends Struct.ComponentSchema {
       'elements.policy-card',
       false
     >;
+    package_policies: Schema.Attribute.Component<'elements.labels', true>;
     payment_policy: Schema.Attribute.Component<'elements.policy-card', false>;
     payment_policy_points: Schema.Attribute.Component<'elements.labels', true>;
     term_and_conditions: Schema.Attribute.Component<

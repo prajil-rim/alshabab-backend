@@ -59,6 +59,7 @@ export default factories.createCoreController(
                 "api::package.package",
                 {
                     filters: filter,
+                    status: "published",
                     ...ctx.query,
                 }
             );
