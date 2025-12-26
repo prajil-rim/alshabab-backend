@@ -928,7 +928,6 @@ export interface ElementsPackageCardBanner extends Struct.ComponentSchema {
   attributes: {
     button: Schema.Attribute.Component<'elements.link', false>;
     image: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
   };
 }
 
