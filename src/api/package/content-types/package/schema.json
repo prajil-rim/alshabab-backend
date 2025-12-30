@@ -26,14 +26,30 @@
       "required": true
     },
     "hero": {
-      "type": "component",
+      "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "blocks.image-hero-section",
-      "repeatable": false
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "card_banner": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "trip_highlights_section": {
       "type": "component",
