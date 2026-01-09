@@ -8,10 +8,10 @@ export default factories.createCoreController(
     "api::blog.blog",
     ({ strapi }) => ({
         async findOne(ctx) {
-            const { id } = ctx.params;
+            const { slug } = ctx.params;
 
             const blog = await strapi.entityService.findMany("api::blog.blog", {
-                filters: { slug: id },
+                filters: { slug },
                 limit: 1,
                 ...ctx.query,
             });

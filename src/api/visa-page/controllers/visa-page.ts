@@ -8,12 +8,12 @@ export default factories.createCoreController(
     "api::visa-page.visa-page",
     ({ strapi }) => ({
         async findOne(ctx) {
-            const { id } = ctx.params;
+            const { slug } = ctx.params;
 
             const visa = await strapi.entityService.findMany(
                 "api::visa-page.visa-page",
                 {
-                    filters: { slug: id },
+                    filters: { slug },
                     limit: 1,
                     ...ctx.query,
                 }
