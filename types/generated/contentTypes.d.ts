@@ -2041,7 +2041,11 @@ export interface ApiParentPackageParentPackage
         };
       }>;
     parent_menu: Schema.Attribute.Enumeration<
-      ['International Tour Packages', 'UAE Activities']
+      [
+        'International Tour Packages',
+        'UAE Activities',
+        'International Holiday Packages',
+      ]
     > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

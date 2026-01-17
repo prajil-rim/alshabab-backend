@@ -165,7 +165,8 @@
       "default": "International Tour Packages",
       "enum": [
         "International Tour Packages",
-        "UAE Activities"
+        "UAE Activities",
+        "International Holiday Packages"
       ]
     }
   }
